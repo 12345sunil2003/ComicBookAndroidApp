@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_10sdp"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_105sdp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/roundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_post" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/regular_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="@id/materialCardView"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        tools:text="Evangelizxczxczxczxcxzcxzczxczxczxczcxzczcxzczcxxon" />
+
+    <TextView
+        android:id="@+id/desc"
+        style="@style/light_regular_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="From MangaLib" />
+</androidx.constraintlayout.widget.ConstraintLayout>

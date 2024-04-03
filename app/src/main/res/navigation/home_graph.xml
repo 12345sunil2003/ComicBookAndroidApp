@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.read.comicbook.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_postSummaryFragment"
+            app:destination="@id/postSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.read.comicbook.home.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_subCategoryFragment"
+            app:destination="@id/subCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="com.read.comicbook.home.NewPostFragment"
+        android:label="NewPostFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.read.comicbook.home.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_postSummaryFragment"
+            app:destination="@id/postSummaryFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subCategoryFragment"
+        android:name="com.read.comicbook.home.SubCategoryFragment"
+        android:label="SubCategoryFragment" >
+        <argument
+            android:name="categoryModel"
+            app:argType="com.read.comicbook.model.CategoryModel"
+            />
+        <action
+            android:id="@+id/action_subCategoryFragment_to_postSummaryFragment"
+            app:destination="@id/postSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postSummaryFragment"
+        android:name="com.read.comicbook.home.PostSummaryFragment"
+        android:label="PostSummaryFragment" >
+        <argument
+            android:name="postInfoModel"
+            app:argType="com.read.comicbook.model.PostInfoModel"/>
+        <action
+            android:id="@+id/action_postSummaryFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+        <action
+            android:id="@+id/action_postSummaryFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.read.comicbook.home.PostDetailsFragment"
+        android:label="PostDetailsFragment" >
+        <argument
+            android:name="postInfoModel"
+            app:argType="com.read.comicbook.model.PostInfoModel"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.read.comicbook.home.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.read.comicbook.home.FavouriteFragment"
+        android:label="FavouriteFragment" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_postSummaryFragment"
+            app:destination="@id/postSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.read.comicbook.home.PaymentFragment"
+        android:label="PaymentFragment" >
+        <argument
+            android:name="postInfoModel"
+            app:argType="com.read.comicbook.model.PostInfoModel"/>
+        <action
+            app:popUpToInclusive="true"
+            android:id="@+id/action_paymentFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+    </fragment>
+</navigation>

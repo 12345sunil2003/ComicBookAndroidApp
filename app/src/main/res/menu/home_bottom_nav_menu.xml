@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@string/home"
+        android:icon="@drawable/baseline_home_24" />
+
+    <item
+        android:id="@+id/categoryFragment"
+        android:title="@string/category"
+        android:icon="@drawable/group" />
+
+    <item
+        android:id="@+id/newPostFragment"
+        android:title="@string/new_post"
+        android:icon="@drawable/add_post" />
+
+    <item
+        android:id="@+id/favouriteFragment"
+        android:title="@string/favourite"
+        android:icon="@drawable/baseline_favorite_border_24" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/user_circle" />
+
+
+
+</menu>
+
